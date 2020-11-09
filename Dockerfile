@@ -1,4 +1,9 @@
-FROM nginx:latest
+FROM node:12.18.2-alpine3.9
 
-COPY . /usr/share/nginx/html
-COPY ./nginx/conf.d /etc/nginx/conf.d
+WORKDIR /usr/src/app
+
+COPY . .
+
+EXPOSE 8000
+
+ENTRYPOINT ["npm", "run", "start"]
