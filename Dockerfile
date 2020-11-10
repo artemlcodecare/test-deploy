@@ -4,4 +4,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ENTRYPOINT ["npm", "run", "start"]
+EXPOSE 8080
+
+CMD ["npm", "run", "start"]
